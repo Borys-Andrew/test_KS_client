@@ -1,0 +1,16 @@
+.isActive{
+  text-decoration: underline;
+  font-weight: 700;
+  color: red;
+}
+
+.nav-bar{
+  display: flex;
+  gap: 15px;
+
+  &__link{
+    text-decoration: none;
+    padding: 15px 0;
+    color: inherit;
+  }
+}
