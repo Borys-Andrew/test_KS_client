@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { addTrain, editTrain, getTrains, removeTrain } from '../../api/train';
 import { Container } from '../../components/Container';
-import { Loader } from '../../components/Loader';
 import { Modal } from '../../components/Modal';
 import { TrainForm } from '../../components/TrainForm/TrainForm';
 import { TrainsTable } from '../../components/TrainsTable';
 import { Train, TrainData } from '../../types';
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import './Trains.scss';
 
 export const Trains: React.FC = () => {
@@ -83,9 +83,10 @@ export const Trains: React.FC = () => {
     setIsModal(true);
   }, []);
 
+  console.log('isLoading >>', isLoading);
+
   return (
     <div className="trains">
-      {isLoading && <Loader />}
       <Container>
         <TrainsTable
           trains={trains}
@@ -94,6 +95,12 @@ export const Trains: React.FC = () => {
           onEdit={handleStartEditTrain}
         />
       </Container>
+
+      <>
+        {isLoading && Loading.dots('Loading...')}
+        {Loading.remove()}
+      </>
+
       {isModal && (
         <Modal setActive={setIsModal}>
           <TrainForm

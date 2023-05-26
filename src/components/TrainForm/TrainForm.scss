@@ -1,4 +1,4 @@
-.form{
+.form {
   width: fit-content;
   border: 1px solid grey;
   padding: 15px;
@@ -6,33 +6,33 @@
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
-  &__head{
+  &__head {
     padding: 15px;
   }
-  &__title{
+  &__title {
     text-align: center;
   }
-  &__first-container{
+  &__first-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 10px;
   }
-  &__label{
+  &__label {
     display: flex;
     flex-direction: column;
   }
-  &__input{
+  &__input {
     margin-top: 5px;
     padding: 5px 10px;
     border-radius: 5px;
   }
-  &__checkbox{
+  &__checkbox {
     display: flex;
     gap: 5px;
     cursor: pointer;
   }
-  &__button-container{
+  &__button-container {
     display: flex;
     justify-content: flex-end;
     gap: 10px;

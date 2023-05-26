@@ -13,7 +13,5 @@ const root = ReactDOM.createRoot(
 root.render(
   <HashRouter>
     <App />
-    {/* <ActionProvider>
-    </ActionProvider> */}
   </HashRouter>,
 );

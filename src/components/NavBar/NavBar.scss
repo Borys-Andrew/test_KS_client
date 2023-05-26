@@ -1,14 +1,12 @@
-.isActive{
-  text-decoration: underline;
+.isActive {
   font-weight: 700;
-  color: red;
 }
 
-.nav-bar{
+.nav-bar {
   display: flex;
   gap: 15px;
 
-  &__link{
+  &__link {
     text-decoration: none;
     padding: 15px 0;
     color: inherit;

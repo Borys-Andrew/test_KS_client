@@ -36,11 +36,7 @@ export const Modal: React.FC<Props> = ({ setActive, children }) => {
           className="modal__closeBtn"
           onClick={() => setActive(false)}
         >
-          <img
-            width="20px"
-            src={closeIcon}
-            alt="close button"
-          />
+          <img width="20px" src={closeIcon} alt="close button" />
         </button>
         {children}
       </div>

@@ -1,7 +1,10 @@
-.container{
+.container {
   max-width: 1200px;
-  // border: 1px solid red;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

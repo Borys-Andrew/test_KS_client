@@ -59,17 +59,17 @@ export const TrainForm: React.FC<props> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    trainToUpdate
-      ? editTrain(trainToUpdate._id, train)
-      : addTrain(train);
+    trainToUpdate ? editTrain(trainToUpdate._id, train) : addTrain(train);
   };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__head">
-        {trainToUpdate
-          ? <h2 className="form__title">Edit train</h2>
-          : <h2 className="form__title">Add train</h2>}
+        {trainToUpdate ? (
+          <h2 className="form__title">Edit train</h2>
+        ) : (
+          <h2 className="form__title">Add train</h2>
+        )}
       </div>
       <div className="form__first-container">
         <div>
@@ -122,11 +122,7 @@ export const TrainForm: React.FC<props> = ({
         <div style={{ display: 'flex', gap: '10px', marginTop: '10px' }}>
           {daysOfWeek.map((day) => {
             return (
-              <label
-                key={day}
-                htmlFor={day}
-                className='form__checkbox'
-              >
+              <label key={day} htmlFor={day} className="form__checkbox">
                 <input
                   type="checkbox"
                   name={day}
@@ -153,7 +149,7 @@ export const TrainForm: React.FC<props> = ({
           <label className="form__label" htmlFor="departure">
             Departure:
             <input
-              style={{ cursor: 'pointer'}}
+              style={{ cursor: 'pointer' }}
               className="form__input"
               type="time"
               id="departure"
@@ -168,7 +164,7 @@ export const TrainForm: React.FC<props> = ({
           <label className="form__label" htmlFor="arrival">
             Arrival:
             <input
-              style={{ cursor: 'pointer'}}
+              style={{ cursor: 'pointer' }}
               className="form__input"
               type="time"
               id="arrival"
@@ -181,22 +177,18 @@ export const TrainForm: React.FC<props> = ({
         </div>
       </div>
       <div className="form__button-container">
-        <button className='button' onClick={() => setActive(false)}>Cancel</button>
-        {trainToUpdate
-          ? <button
-            className='button'
-            type="submit"
-            id='edit'
-          >
+        <button className="button" onClick={() => setActive(false)}>
+          Cancel
+        </button>
+        {trainToUpdate ? (
+          <button className="button" type="submit" id="edit">
             Edit
           </button>
-          : <button
-            className='button'
-            type="submit"
-            id='add'
-          >
+        ) : (
+          <button className="button" type="submit" id="add">
             Add
-          </button>}
+          </button>
+        )}
       </div>
     </form>
   );

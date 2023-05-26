@@ -8,7 +8,7 @@ import { getFilteredTrains } from '../../utils/getFilteredTrains';
 
 type Props = {
   trains: Train[];
-  onAdd: ()=> void;
+  onAdd: () => void;
   onEdit: (train: Train) => void;
   deleteTrain: (id: string) => void;
 };
@@ -42,9 +42,11 @@ export const TrainsTable: React.FC<Props> = ({
   return (
     <div>
       <div>
-        <button className='button' onClick={onAdd}>Add train</button>
+        <button className="button" onClick={onAdd}>
+          Add train
+        </button>
         <input
-          style={{marginLeft: '20px'}}
+          style={{ marginLeft: '20px' }}
           className="search-query"
           type="search"
           placeholder="Search"

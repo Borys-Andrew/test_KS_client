@@ -1,6 +1,5 @@
 import { TrainData } from '../types';
 
-// const BASE_URL = '';
 const BASE_URL = 'http://localhost:8080';
 
 export const getTrains = async () => {
@@ -26,7 +25,6 @@ export const getTrainById = async (id: string) => {
     throw new Error('bad request');
   }
 };
-
 
 export const addTrain = async (newTrain: TrainData) => {
   const fetchUrl = `${BASE_URL}/trains`;

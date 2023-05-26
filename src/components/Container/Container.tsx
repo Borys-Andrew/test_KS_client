@@ -3,7 +3,7 @@ import './Container.scss';
 
 type ContainerProps = {
   children: ReactNode;
-}
+};
 
 export const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
